@@ -9,15 +9,17 @@ class FifthPictureActivity : AppCompatActivity() {
     lateinit var btnBack5: Button
     lateinit var btnNext5: Button
     override fun onCreate(savedInstanceState: Bundle?) {
-        btnBack5= findViewById(R.id.btnBack5)
-        btnNext5= findViewById(R.id.btnNext5)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fifth_picture)
+        btnBack5= findViewById(R.id.btnBack5)
+        btnNext5= findViewById(R.id.btnNext5)
         btnBack5.setOnClickListener {
             val intent= Intent(this,FourthPictureActivity::class.java)
+            startActivity(intent)
         }
         btnNext5.setOnClickListener {
             val intent= Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
